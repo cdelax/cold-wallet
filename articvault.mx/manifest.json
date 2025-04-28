@@ -1,0 +1,23 @@
+{
+    "name": "Cold Wallet Offline",
+    "short_name": "ColdWallet",
+    "description": "Cold wallet offline para BitcoinSV y Ethereum.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#1e1e1e",
+    "theme_color": "#101010",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/assets/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

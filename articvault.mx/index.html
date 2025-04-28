@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Wallet Offline</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/assets/icon.png" type="image/png">
+  <meta name="theme-color" content="#101010">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+  <h1 class="text-2xl font-bold mb-4">Cold Wallet Offline (BTC-SV / ETH)</h1>
+
+  <!-- Generación de Wallet -->
+  <section id="wallet-section" class="w-full max-w-md">
+    <button id="generate-wallet" class="btn">Generar Wallet Nueva</button>
+    <input id="mnemonic" class="input mt-2 w-full" placeholder="Passphrase (BIP39)">
+    <button id="import-wallet" class="btn mt-2">Importar Wallet</button>
+  </section>
+
+  <!-- Direcciones -->
+  <section id="address-section" class="mt-6 w-full max-w-md hidden">
+    <h2 class="text-xl font-semibold mb-2">Direcciones</h2>
+    <p>ETH Address: <span id="eth-address" class="break-words"></span></p>
+    <p>BSV Address: <span id="bsv-address" class="break-words"></span></p>
+    <canvas id="qrcode" class="mt-2"></canvas>
+  </section>
+
+  <!-- Firmar transacciones -->
+  <section id="sign-section" class="mt-6 w-full max-w-md hidden">
+    <h2 class="text-xl font-semibold mb-2">Firmar Transacción</h2>
+    <textarea id="tx-data" class="input w-full" placeholder="Pegue aquí datos de transacción"></textarea>
+    <button id="sign-tx" class="btn mt-2">Firmar</button>
+    <textarea id="signed-tx" class="input w-full mt-2" placeholder="Resultado firmado" readonly></textarea>
+  </section>
+
+  <script src="/libs/ethers.min.js"></script>
+  <script src="/libs/bsv.min.js"></script>
+  <script src="/libs/crypto-js.min.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
+
